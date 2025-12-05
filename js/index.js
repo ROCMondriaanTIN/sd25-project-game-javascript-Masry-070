@@ -19,7 +19,11 @@ function beginSpel () {
     })
         restartBtn.style.display = "block";
         let minesInputNmbr = Number(minesInput.value);
-        console.log(minesInputNmbr);
+        if (minesInputNmbr >= 7) {
+            alert ("Je kan maximaal 6 Mines hebben.")
+        } else {
+            console.log(minesInputNmbr);
+        }
         
 }
 
@@ -28,6 +32,7 @@ function clickBox(e) {
         e.target.classList.add("correct-box");
         coins++
         coinsA.textContent = `Coins: ${coins}`
+        console.log(e.target.id);
     }
 
 function restart() {
