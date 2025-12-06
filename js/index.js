@@ -5,37 +5,44 @@ let minesInput = document.getElementById("minesInput");
 let restartBtn = document.getElementById("restartBtn");
 
 let coins = 0;
+let spelActief = false;
 
 function beginSpel () {
-    boxes.forEach(box => {
+    let minesInputNmbr = Number(minesInput.value);
+    if (minesInputNmbr >= 7) {
+        alert ("Je kan maximaal 6 Mines hebben.")
+    } else {
+        spelActief = true;
+        restartBtn.style.display = "block";
+        console.log (minesInputNmbr);
+        boxes.forEach(box => {
         box.classList.remove("box");
         box.classList.add("coverd-box");
 
-        let coverdBX = document.querySelectorAll(".coverd-box");
-        coverdBX.forEach(bx => {
-        bx.addEventListener("click", clickBox)
-})
-
-    })
-        restartBtn.style.display = "block";
-        let minesInputNmbr = Number(minesInput.value);
-        if (minesInputNmbr >= 7) {
-            alert ("Je kan maximaal 6 Mines hebben.")
-        } else {
-            console.log(minesInputNmbr);
-        }
-        
+    let coverdBX = document.querySelectorAll(".coverd-box");
+    coverdBX.forEach(bx => {
+    bx.addEventListener("click", clickBox)
+        })
+        })
+    }
 }
 
 function clickBox(e) {
+
+    if (spelActief === true) {
         e.target.classList.remove("coverd-box");
         e.target.classList.add("correct-box");
         coins++
         coinsA.textContent = `Coins: ${coins}`
         console.log(e.target.id);
+    } else {
+        return
+    }
     }
 
 function restart() {
+    spelActief = false;
+
     boxes.forEach(box => {
         box.classList.remove("coverd-box");
         box.classList.remove("correct-box");
