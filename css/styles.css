@@ -297,11 +297,23 @@ footer {
 
 .leftbar {
     grid-area: leftbar;
-    background: #746f6f;
+    background: #ffe6e6;
+}
+
+.over-ons {
+    display: flex !important;
+}
+
+.over-p {
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 3px 5px 3px white;
+    margin-bottom: 30px;
 }
 
 .contact {
-    background: rgb(255, 255, 255);
+    background: #fffafa;
     grid-area: contact;
 }
 
@@ -320,6 +332,7 @@ footer {
 .form-h1 {
     margin-bottom: 40px;
     font-size: 50px;
+    text-shadow: 3px 3px 6px rgb(98, 94, 94);
 }
 
 label {
@@ -327,7 +340,7 @@ label {
 }
 
 .rightbar {
-    background: #746f6f;
+    background: #ffe6e6;
     grid-area: rightbar;
 }
 
