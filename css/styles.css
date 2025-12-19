@@ -77,7 +77,7 @@ body {
     font-size: 25px;
     color: #ffffff;
     border: none;
-    box-shadow: 0px 14px 15px rgba(255, 255, 255, 0.6);
+    box-shadow: 1px 1px 30px rgb(255, 255, 255);
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     border-radius: 10px;
@@ -101,23 +101,9 @@ body {
     height: 600px;
     gap: 50px;
     border-radius: 10px;
+    box-shadow: 1px 1px 30px rgb(255, 255, 255);
 }
 
-#blocksInput {
-    width: 350px;
-    height: 150px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 15px;
-    background-color: #fa5959;
-}
-
-#blocksInput::placeholder {
-    font-size: 17px;
-    color: white;
-    
-}
 
 #minesInput {
     width: 350px;
@@ -297,23 +283,34 @@ footer {
 
 .leftbar {
     grid-area: leftbar;
-    background: #ffe6e6;
+    background: #c92020;
 }
 
 .over-ons {
     display: flex !important;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 30px rgb(253, 178, 178);
+    padding: 30px;
+}
+
+.over-h1 {
+    color: white;
+    text-shadow: 3px 5px 3px rgb(49, 49, 49);
 }
 
 .over-p {
     width: 200px;
     font-size: 20px;
     font-weight: bold;
-    text-shadow: 3px 5px 3px white;
+    color: white;
+    text-shadow: 3px 5px 3px rgb(49, 49, 49);
     margin-bottom: 30px;
 }
 
 .contact {
-    background: #fffafa;
+    background: #c92020;
     grid-area: contact;
 }
 
@@ -324,24 +321,44 @@ footer {
     gap: 20px;
 }
 
+.form-row button {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-row button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 #contact-form {
-    box-shadow: 1px 1px 30px grey;
+    box-shadow: 1px 1px 30px rgb(255, 255, 255);
+    border-radius: 15px;
     padding: 100px;
 }
 
 .form-h1 {
     margin-bottom: 40px;
     font-size: 50px;
-    text-shadow: 3px 3px 6px rgb(98, 94, 94);
+    color: white;
+    text-shadow: 3px 5px 3px rgb(49, 49, 49);
 }
 
 label {
     font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 5px 5px rgb(0, 0, 0);
 }
 
 .rightbar {
-    background: #ffe6e6;
+    background: #c92020;
     grid-area: rightbar;
+}
+
+.right-img img {
+    width: 650px;
+    margin-right: 90px;
 }
 
 .cfooter {
