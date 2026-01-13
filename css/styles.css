@@ -40,6 +40,29 @@ body {
     padding: 0 40px;
 }
 
+#question-1 img {
+    display: block;
+    width: 60px;
+}
+
+#question-1 img:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+#question-2 {
+    display: none;
+}
+
+#question-2 img {
+    width: 60px;
+}
+
+#question-2 img:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
 .stats button {
     width: 130px;
     height: 65px;
